@@ -2,42 +2,21 @@
 
 Aplicação web *mobile-first* desenvolvida como ferramenta de apoio pedagógico para a Tutoria de Estatística da Universidade Federal do Rio Grande do Norte (UFRN). O objetivo é permitir que os bolsistas apliquem testes rápidos e interativos com os alunos durante os atendimentos para fixação de conteúdo das disciplinas iniciais, com envio direto das questões para o **Anki** via API.
 
----
+## Como Contribuir
 
-## Escopo e Público-Alvo
+ 1. Faça um clone deste repositório.
+ 2. Para adicionar novas questões, edite os arquivos na pasta [/data]() seguindo o modelo(note o escape duplo `\\` exigido pelo formato JSON para barras invertidas do LaTeX):
 
-* **Público:** Alunos das disciplinas introdutórias de Estatística e Probabilidade.
-* **Uso:** Dinâmicas rápidas via smartphone (presencialmente na tutoria ou de forma assíncrona).
-* **Formato:** Questões de múltipla escolha com feedback imediato e integração direta com baralhos do Anki para repetição espaçada.
+```JSON
+{
+  "id": 1,
+  "disciplina": "Probabilidade I",
+  "topico": "Probabilidade Condicional",
+  "enunciado": "Sejam \\(A\\) e \\(B\\) dois eventos independentes com \\(P(A) = 0{,}4\\) e \\(P(B) = 0{,}5\\). Qual o valor de \\(P(A \\cap B)\\)?",
+  "alternativas": ["0,90", "0,20", "0,10", "0,50"],
+  "correta": 1,
+  "justificativa": "Como \\(A\\) e \\(B\\) são independentes, temos: \\[P(A \\cap B) = P(A) \\cdot P(B) = 0{,}4 \\cdot 0{,}5 = 0{,}20\\]"
+}
+```
+  3. Faça um **PuLL Request** descrevendo as questões adicionais.
 
----
-
-## Estrtura
-
-Priorizando tecnologias abertas, leves e de fácil manutenção:
-
-* **Estrutura e Estilo:** HTML5 semântico e CSS3 (abordagem *Mobile-First*, Flexbox/Grid).
-* **Lógica:** JavaScript (Vanilla ES6+) para controle de estado, pontuação e carregamento dinâmico de questões.
-* **Renderização Matemática:** [MathJax 3](https://www.mathjax.org/) (biblioteca open-source para renderização de LaTeX no navegador, mantendo 100% de compatibilidade sintática com o MathJax nativo do Anki).
-* **Integração com Anki:** API local (**AnkiConnect** / ponte Android-Desktop) via requisições HTTP (`fetch`) para criação automática de baralhos (`createDeck`) e adição de notas (`addNotes`).
-* **Banco de Questões:** Arquivos estruturados em `JSON` (compatíveis com a interface do Quiz e com o mapeamento Frente/Verso do Anki).
-* **Hospedagem:** GitHub Pages / GitLab Pages.
-
----
-
-## Diretórios Planejada
-
-```text
-quiz-tutoria-ufrn/
-├── index.html            # Tela inicial (seleção de disciplina/tópico)
-├── quiz.html             # Interface principal de resolução das questões
-├── css/
-│   └── style.css         # Estilização responsiva (foco em telas pequenas)
-├── js/
-│   ├── app.js            # Lógica de navegação, pontuação e carregamento JSON
-│   ├── mathjax-config.js # Configuração do MathJax 3 (delimitadores e re-renderização dinâmica)
-│   └── anki-api.js       # Comunicação com a API do Anki (createDeck / addNotes)
-├── data/
-│   ├── prob1.json        # Banco de questões: Probabilidade I
-│   └── est_desc.json     # Banco de questões: Estatística Descritiva
-└── README.md
