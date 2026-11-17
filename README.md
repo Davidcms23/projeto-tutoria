@@ -8,7 +8,7 @@ Aplicação web *mobile-first* desenvolvida como ferramenta de apoio pedagógico
 No terminal, baixe o projeto e crie uma ramificação isolada para as suas alterações (evitando conflitos diretos na branch `main`):
 
 ```bash
-git clone [https://github.com/Davidcms23/projeto-tutoria.git](https://github.com/Davidcms23/projeto-tutoria.git)
+git clone https://github.com/Davidcms23/projeto-tutoria.git
 cd projeto-tutoria
 git checkout -b feat/questoes-est-descritiva
 ```
@@ -38,7 +38,5 @@ git push -u origin feat/questoes-est-descritiva
 ```
 ### 4 - Abra um Pull Request (PR)
 
- 1. Acesse [Projeto](github.com/Davidcms23/projeto-tutoria).
- 2. Clique no botão Compare & pull request que aparecerá no topo da página.
- 3. No título e na descrição do PR, informe a disciplina, os tópicos abordados e a quantidade de questões adicionadas para revisão dos demais bolsistas.
+
 
