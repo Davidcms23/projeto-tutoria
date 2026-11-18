@@ -1,4 +1,4 @@
-# Quiz Tutoria de Estatística
+# Tutoria de Estatística
 
 Aplicação web *mobile-first* desenvolvida como ferramenta de apoio pedagógico para a Tutoria de Estatística da Universidade Federal do Rio Grande do Norte (UFRN). O objetivo é permitir que os bolsistas apliquem testes rápidos e interativos com os alunos durante os atendimentos para fixação de conteúdo das disciplinas iniciais, com envio direto das questões para o **Anki** via API.
 
