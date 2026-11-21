@@ -1,16 +1,117 @@
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  line-height: 1.5;
+/* ===== 1. Variáveis ===== */
+:root {
+  --cor-fundo: #f4f1ff;
+  --cor-superficie: #ffffff;
+  --cor-texto: #231f3d;
+  --cor-texto-suave: #6a6485;
+  --raio: 18px;
+  --sombra: 0 6px 18px rgba(80, 60, 160, 0.15);
+  --gradiente-topo: linear-gradient(135deg, #7c4dff, #ff6b9d 60%, #ffb347);
 }
 
-.container {
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #17142b;
+    --cor-superficie: #231f3d;
+    --cor-texto: #f2efff;
+    --cor-texto-suave: #b3acd6;
+    --sombra: 0 6px 18px rgba(0, 0, 0, 0.35);
   }
+}
+
+/* ===== 2. Base ===== */
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* ===== 3. Topo colorido ===== */
+.topo {
+  background: var(--gradiente-topo);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  border-radius: 0 0 var(--raio) var(--raio);
+}
+
+.topo h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.6rem, 6vw, 2.4rem);  /* cresce e encolhe com a tela */
+}
+
+.topo p { margin: 0; opacity: 0.95; }
+
+/* ===== 4. Conteúdo centralizado em qualquer tela ===== */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: -1.5rem auto 0;   /* sobe um pouco sobre o topo */
+  padding: 0 1rem 2rem;
+}
+
+.lista-disciplinas {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ===== 5. Cards ===== */
+.card-disciplina {
+  background: var(--cor-superficie);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1.25rem;
+  border-top: 8px solid var(--destaque);
+}
+
+.card-disciplina h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.2rem;
+  color: var(--destaque);
+}
+
+.card-disciplina p {
+  margin: 0 0 1rem;
+  color: var(--cor-texto-suave);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ===== 6. Botões ===== */
+.btn {
+  flex: 1 1 120px;          /* ocupam a largura disponível */
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--destaque);
+  border-radius: 999px;
+  background: var(--destaque);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--destaque);
+}
+
+/* ===== 7. Telas maiores ===== */
+@media (min-width: 768px) {
+  .lista-disciplinas { grid-template-columns: repeat(2, 1fr); }
 }
