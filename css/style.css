@@ -57,25 +57,29 @@ body {
 }
 
 .barra-conteudo {
-  height: 56px;
+  padding-block: 0.9rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .marca {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.35rem;
   color: var(--tinta);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  line-height: 1;
 }
 
 .marca-icone {
-  width: 26px;
-  height: 18px;
+  width: 46px;
+  height: 25px;
   display: block;
 }
 
@@ -308,4 +312,261 @@ mjx-container[display="true"] {
   .card-semestre {
     min-height: 150px;
   }
+}
+
+/* ===== 11. Tela de estudo (Modo, Unidades, Quiz e Cards) ===== */
+.intro-compacta {
+  margin-bottom: 1.5rem;
+}
+
+.seletor-modo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.btn-modo {
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--tinta-media);
+  font-family: var(--fonte-ui);
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.btn-modo + .btn-modo {
+  border-left: 1px solid var(--borda);
+}
+
+.btn-modo.ativo {
+  background-color: var(--tinta);
+  color: var(--fundo);
+  font-weight: 600;
+}
+
+.filtro-unidades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-unidade {
+  min-height: 38px;
+  padding: 0.4rem 0.25rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--tinta-media);
+  font-family: var(--fonte-mono);
+  font-size: 0.74rem;
+  cursor: pointer;
+  transition: border-color 0.16s ease, color 0.16s ease, background-color 0.16s ease;
+}
+
+.btn-unidade:hover,
+.btn-unidade:active {
+  border-color: var(--borda-ativa);
+  color: var(--tinta);
+}
+
+.btn-unidade.ativo {
+  border-color: var(--tinta);
+  color: var(--tinta);
+  background-color: var(--superficie-hover);
+}
+
+.bloco-conteudo {
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  padding: 1.35rem 1.25rem;
+}
+
+.bloco-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.bloco-meta {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--tinta-suave);
+}
+
+.selo-status {
+  font-family: var(--fonte-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--borda-ativa);
+  border-radius: 4px;
+  color: var(--tinta);
+}
+
+.texto-principal {
+  margin: 0 0 1.35rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* Alternativas do Quiz */
+.lista-alternativas {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.btn-alternativa {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--tinta);
+  font-family: var(--fonte-ui);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.btn-alternativa:not(:disabled):hover,
+.btn-alternativa:not(:disabled):active {
+  border-color: var(--borda-ativa);
+  background-color: var(--superficie-hover);
+}
+
+.btn-alternativa:disabled {
+  cursor: default;
+}
+
+.alt-letra {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--borda-ativa);
+  border-radius: 4px;
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tinta-media);
+}
+
+.alt-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Destaque de acerto/erro mantendo apenas 2 cores */
+.btn-alternativa.alt-correta {
+  border-color: var(--tinta);
+  background-color: var(--tinta);
+  color: var(--fundo);
+}
+
+.btn-alternativa.alt-correta .alt-letra {
+  border-color: var(--fundo);
+  color: var(--fundo);
+}
+
+.btn-alternativa.alt-errada {
+  border-style: dashed;
+  border-color: var(--borda-ativa);
+  color: var(--tinta-media);
+}
+
+/* Explicação / Verso do Card */
+.bloco-explicacao {
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--borda);
+}
+
+.explicacao-titulo {
+  margin: 0 0 0.45rem;
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--tinta-media);
+}
+
+.explicacao-texto {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--tinta);
+}
+
+/* Botões de ação (Cards e Navegação) */
+.btn-acao-primaria,
+.btn-acao-secundaria {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-family: var(--fonte-ui);
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.16s ease, border-color 0.16s ease;
+}
+
+.btn-acao-primaria {
+  border: 1px solid var(--tinta);
+  background-color: var(--tinta);
+  color: var(--fundo);
+}
+
+.btn-acao-secundaria {
+  border: 1px solid var(--borda-ativa);
+  background-color: transparent;
+  color: var(--tinta);
+}
+
+.nav-itens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.btn-nav {
+  min-height: 44px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--tinta);
+  font-family: var(--fonte-ui);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.btn-nav:not(:disabled):hover,
+.btn-nav:not(:disabled):active {
+  border-color: var(--borda-ativa);
+  background-color: var(--superficie-hover);
+}
+
+.btn-nav:disabled {
+  color: var(--tinta-suave);
+  opacity: 0.45;
+  cursor: default;
 }
