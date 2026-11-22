@@ -1,0 +1,70 @@
+{
+  "1": {
+    "codigo": "SEM 01",
+    "titulo": "1º Semestre",
+    "descricao": "Disciplinas introdutórias de programação, estatística, cálculo e geometria.",
+    "disciplinas": [
+      {
+        "id": "algoritmos",
+        "ordem": "01",
+        "nome": "Algoritmo e Programação de Computadores",
+        "cargaHoraria": 60
+      },
+      {
+        "id": "estatistica-descritiva",
+        "ordem": "02",
+        "nome": "Estatística Descritiva",
+        "cargaHoraria": 60
+      },
+      {
+        "id": "orientacao-profissional",
+        "ordem": "03",
+        "nome": "Orientação Profissional e Social",
+        "cargaHoraria": 30
+      },
+      {
+        "id": "calculo-1",
+        "ordem": "04",
+        "nome": "Cálculo Diferencial e Integral I",
+        "cargaHoraria": 90
+      },
+      {
+        "id": "geometria-analitica",
+        "ordem": "05",
+        "nome": "Geometria Analítica e Vetorial",
+        "cargaHoraria": 90
+      }
+    ]
+  },
+  "2": {
+    "codigo": "SEM 02",
+    "titulo": "2º Semestre",
+    "descricao": "Continuação em linguagens, probabilidade, álgebra linear e cálculo.",
+    "disciplinas": [
+      {
+        "id": "linguagens-programacao",
+        "ordem": "01",
+        "nome": "Linguagens de Programação",
+        "cargaHoraria": 60
+      },
+      {
+        "id": "probabilidade-1",
+        "ordem": "02",
+        "nome": "Probabilidade Básica I",
+        "cargaHoraria": 90
+      },
+      {
+        "id": "algebra-linear",
+        "ordem": "03",
+        "nome": "Álgebra Linear",
+        "cargaHoraria": 90
+      },
+      {
+        "id": "calculo-2",
+        "ordem": "04",
+        "nome": "Cálculo Diferencial e Integral II",
+        "cargaHoraria": 90
+      }
+    ]
+  }
+}

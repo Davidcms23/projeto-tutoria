@@ -3,48 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tutoria - Suporte aos alunos</title>
+  <title>Tutoria</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- MathJax v3 (Apache 2.0) -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
 </head>
 <body>
-  <header class="topo">
-    <h1>📚 Tutoria</h1>
-    <p>Quiz e cards para as disciplinas iniciais</p>
+  <header class="barra-topo">
+    <div class="largura-padrao barra-conteudo">
+      <a href="index.html" class="marca">
+        <svg class="marca-icone" viewBox="0 0 28 20" fill="none" aria-hidden="true">
+          <path d="M2.5 15.5C8 15.5 9.8 3 14 3C18.2 3 20 15.5 25.5 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="2" y1="17.5" x2="26" y2="17.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span>Tutoria</span>
+      </a>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="lista-disciplinas">
-
-      <article class="card-disciplina" style="--destaque: #7c4dff;">
-        <h2>Introdução à Estatística</h2>
-        <p>12 cards · 8 perguntas</p>
-        <div class="acoes">
-          <a href="#" class="btn">Estudar</a>
-          <a href="#" class="btn btn-secundario">Quiz</a>
-        </div>
-      </article>
-
-      <article class="card-disciplina" style="--destaque: #ff6b6b;">
-        <h2>Cálculo 1</h2>
-        <p>10 cards · 6 perguntas</p>
-        <div class="acoes">
-          <a href="#" class="btn">Estudar</a>
-          <a href="#" class="btn btn-secundario">Quiz</a>
-        </div>
-      </article>
-
-      <article class="card-disciplina" style="--destaque: #00b894;">
-        <h2>Álgebra Linear</h2>
-        <p>8 cards · 5 perguntas</p>
-        <div class="acoes">
-          <a href="#" class="btn">Estudar</a>
-          <a href="#" class="btn btn-secundario">Quiz</a>
-        </div>
-      </article>
-
+  <main class="principal largura-padrao">
+    <section class="intro">
+      <h1>Escolha o semestre</h1>
+      <p class="subtitulo">Cards de revisão e quizzes organizados por unidade.</p>
     </section>
-  </main>
 
-  <script src="js/app.js"></script>
+    <nav class="lista-semestres" aria-label="Seleção de semestre">
+      <a href="disciplinas.html?semestre=1" class="card-semestre">
+        <span class="canto canto-se" aria-hidden="true"></span>
+        <span class="canto canto-id" aria-hidden="true"></span>
+
+        <div class="card-semestre-texto">
+          <h2>1º Semestre</h2>
+          <p class="card-detalhe">5 disciplinas</p>
+        </div>
+
+        <svg class="icone-seta" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 10H16M11 5L16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="disciplinas.html?semestre=2" class="card-semestre">
+        <span class="canto canto-se" aria-hidden="true"></span>
+        <span class="canto canto-id" aria-hidden="true"></span>
+
+        <div class="card-semestre-texto">
+          <h2>2º Semestre</h2>
+          <p class="card-detalhe">4 disciplinas</p>
+        </div>
+
+        <svg class="icone-seta" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 10H16M11 5L16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </nav>
+  </main>
 </body>
 </html>
