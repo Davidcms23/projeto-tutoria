@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudo — Tutoria</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- MathJax v3 (Apache 2.0) -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+<body>
+    <header class="barra-topo">
+        <div class="largura-padrao barra-conteudo">
+          <a href="index.html" class="marca">
+            <svg class="marca-icone" viewBox="0 0 48 26" fill="none" aria-hidden="true">
+              <path d="M3 20.5C13 20.5 16.5 3.5 24 3.5C31.5 3.5 35 20.5 45 20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="2" y1="23" x2="46" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>TUTORIA</span>
+          </a>
+        </div>
+    </header>
+
+  <main class="principal principal-lista largura-padrao">
+    <a href="disciplinas.html?semestre=1" id="link-voltar" class="link-voltar">
+      <svg class="icone-voltar" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M16 10H4M9 5L4 10L9 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Disciplinas</span>
+    </a>
+
+    <section class="intro intro-compacta">
+      <h1 id="titulo-disciplina">Carregando...</h1>
+    </section>
+
+    <!-- Seletor de modo -->
+    <div class="seletor-modo" role="tablist" aria-label="Modo de estudo">
+      <button type="button" class="btn-modo" data-modo="quiz" role="tab" aria-selected="true">
+        Quiz
+      </button>
+      <button type="button" class="btn-modo" data-modo="cards" role="tab" aria-selected="false">
+        Cards
+      </button>
+    </div>
+
+    <!-- Filtro de unidade -->
+    <div class="filtro-unidades" role="group" aria-label="Filtrar por unidade">
+      <button type="button" class="btn-unidade ativo" data-unidade="todas">Todas</button>
+      <button type="button" class="btn-unidade" data-unidade="1">Unid. 1</button>
+      <button type="button" class="btn-unidade" data-unidade="2">Unid. 2</button>
+      <button type="button" class="btn-unidade" data-unidade="3">Unid. 3</button>
+    </div>
+
+    <!-- Área dinâmica de Cards / Quiz -->
+    <section id="area-estudo" class="area-estudo" aria-live="polite"></section>
+  </main>
+
+  <script src="js/estudo.js"></script>
+</body>
+</html>
