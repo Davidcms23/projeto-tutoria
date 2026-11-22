@@ -1,0 +1,15 @@
+[
+  {
+    "id": "gav-u1-q1",
+    "unidade": 1,
+    "enunciado": "Considere os vetores $\\vec{u} = (2, -1, 3)$ e $\\vec{v} = (k, 4, -2)$ em $\\mathbb{R}^3$. Para qual valor de $k$ os vetores $\\vec{u}$ e $\\vec{v}$ são ortogonais?",
+    "alternativas": [
+      "$k = 1$",
+      "$k = 5$",
+      "$k = -5$",
+      "$k = 3$"
+    ],
+    "correta": 1,
+    "explicacao": "Dois vetores são ortogonais quando seu produto escalar é nulo: $\\vec{u} \\cdot \\vec{v} = 2k + (-1)(4) + (3)(-2) = 0$. Resolvendo, $2k - 10 = 0 \\implies k = 5$."
+  }
+]

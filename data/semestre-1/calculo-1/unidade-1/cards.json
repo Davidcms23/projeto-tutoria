@@ -1,0 +1,15 @@
+[
+  {
+    "id": "cal1-u1-q1",
+    "unidade": 1,
+    "enunciado": "Qual é o valor do limite $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$?",
+    "alternativas": [
+      "$0$",
+      "$2$",
+      "$4$",
+      "O limite não existe"
+    ],
+    "correta": 2,
+    "explicacao": "A substituição direta gera a indeterminação $\\frac{0}{0}$. Fatorando o numerador como diferença de quadrados, obtém-se $\\frac{(x - 2)(x + 2)}{x - 2} = x + 2$ para $x \\neq 2$. Logo, $\\lim_{x \\to 2} (x + 2) = 4$."
+  }
+]

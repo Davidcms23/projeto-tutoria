@@ -1,0 +1,8 @@
+[
+  {
+    "id": "est-u1-c1",
+    "unidade": 1,
+    "frente": "Qual é a fórmula da variância amostral $s^2$ e por que o denominador é $n - 1$?",
+    "verso": "$$s^2 = \\frac{1}{n - 1} \\sum_{i=1}^{n} (x_i - \\bar{x})^2$$ O denominador $n - 1$ (correção de Bessel) compensa a perda de 1 grau de liberdade ao estimar a média populacional $\\mu$ por $\\bar{x}$, tornando $s^2$ um estimador não viesado de $\\sigma^2$."
+  }
+]

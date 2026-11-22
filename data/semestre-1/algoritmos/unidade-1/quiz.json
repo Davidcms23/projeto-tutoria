@@ -1,0 +1,15 @@
+[
+  {
+    "id": "alg-u1-q1",
+    "unidade": 1,
+    "enunciado": "Considere as atribuições sequenciais com inteiros: $a \\leftarrow 5$, $b \\leftarrow 2$, $a \\leftarrow a + b$, $b \\leftarrow a - b$ e $a \\leftarrow a - b$. Ao final da execução, quais são os valores armazenados em $a$ e $b$, respectivamente?",
+    "alternativas": [
+      "$a = 2$ e $b = 5$",
+      "$a = 7$ e $b = 5$",
+      "$a = 5$ e $b = 2$",
+      "$a = 2$ e $b = 7$"
+    ],
+    "correta": 0,
+    "explicacao": "Executando passo a passo: inicialmente $a = 5$ e $b = 2$. Após $a \\leftarrow a + b$, temos $a = 7$. Em seguida, $b \\leftarrow 7 - 2 = 5$. Por fim, $a \\leftarrow 7 - 5 = 2$. A sequência realiza a troca de valores entre duas variáveis sem variável auxiliar."
+  }
+]

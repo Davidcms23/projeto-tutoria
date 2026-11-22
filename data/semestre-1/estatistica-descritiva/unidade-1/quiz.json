@@ -1,0 +1,15 @@
+[
+  {
+    "id": "est-u1-q1",
+    "unidade": 1,
+    "enunciado": "Para qualquer conjunto finito de observações numéricas $x_1, x_2, \\dots, x_n$ com média aritmética $\\bar{x}$, qual é sempre o valor da soma dos desvios $\\sum_{i=1}^{n} (x_i - \\bar{x})$?",
+    "alternativas": [
+      "$n \\cdot \\bar{x}$",
+      "$0$",
+      "$\\frac{1}{n}$",
+      "Depende da variância do conjunto"
+    ],
+    "correta": 1,
+    "explicacao": "Pela linearidade do somatório, $\\sum_{i=1}^{n} (x_i - \\bar{x}) = \\sum_{i=1}^{n} x_i - n\\bar{x}$. Como $\\bar{x} = \\frac{1}{n}\\sum_{i=1}^{n} x_i$, segue que $\\sum_{i=1}^{n} x_i = n\\bar{x}$, resultando em $n\\bar{x} - n\\bar{x} = 0$."
+  }
+]

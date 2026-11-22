@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ops-u1-q1",
+    "unidade": 1,
+    "enunciado": "No âmbito das universidades públicas brasileiras, qual princípio define a articulação obrigatória entre a formação em sala de aula, a produção de conhecimento científico e o diálogo direto com a sociedade?",
+    "alternativas": [
+      "Indissociabilidade entre ensino, pesquisa e extensão",
+      "Separação administrativa entre graduação e pesquisa",
+      "Substituição da pesquisa aplicada por estágio supervisionado",
+      "Autonomia restrita às atividades de sala de aula"
+    ],
+    "correta": 0,
+    "explicacao": "O artigo 207 da Constituição Federal estabelece o princípio da indissociabilidade entre ensino, pesquisa e extensão, integrando a formação acadêmica à investigação científica e ao retorno social."
+  }
+]
